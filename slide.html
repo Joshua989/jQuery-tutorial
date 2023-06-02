@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css"/>
+  
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      $("#slide-up").click(function(){
+        $("#textBox").slideUp("2000","linear");
+      });
+      $("#slide-down").click(function(){
+        $("#textBox").slideDown("2000","linear");
+      });
+      $("#toggleSlide").click(function(){
+        $("#textBox").slideToggle("2000", function (){
+          alert("down");
+        });
+      });
+    });
+  </script>
+  
+  <style>
+    #textBox{
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Links to trigger slide-up, slide-down, and toggle effects -->
+  <a href="#" id="slide-up">slide up</a>
+  <a href="#" id="slide-down">slide down</a>
+  <a href="#" id="toggleSlide">toggle</a>
+
+  <!-- Hidden text box that will slide in and out -->
+  <div id="textBox">
+    <p>
+      For my first titration, my initial volume of base = 25cm³ and the initial volume of acid is 0.00cm³, and the final volume of acid is 8.20cm³.
+      For my second titration, the volume of base is 25cm³ and the initial volume of acid is 8.20cm³, and the final volume is 16.1cm³.
+      The molarity of the acid is 0.1.
+      The concentration of the two mixtures is 7.85gdm–³.
+      Find the molarity of hydrogentrioxocarbonate4 ions in the given solution.
+    </p>
+  </div>
+</body>
+</html>
