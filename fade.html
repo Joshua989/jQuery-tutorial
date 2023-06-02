@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css"/>
+  
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      // Add fading effect when "Fade In" link is clicked
+      $("#fade-in").on("click", function (){
+        $("#textBox").fadeIn(3000, function(){
+          alert("I am done fading in");
+        });
+      });
+      
+      // Add fading effect when "Fade Out" link is clicked
+      $("#fade-out").on("click", function (){
+        $("#textBox").fadeOut("fast", function(){
+          alert("I am done fading out");
+        });
+      });
+    });
+  </script>
+  
+  <style>
+    #textBox{
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Links to trigger fade-in and fade-out effects -->
+  <a href="#" id="fade-in">Fade In</a>
+  <a href="#" id="fade-out">Fade Out</a>
+
+  <!-- Hidden text box that will fade in and out -->
+  <div id="textBox">
+    <p>
+      For my first titration, my initial volume of base = 25cm³ and the initial volume of acid is 0.00cm³, and the final volume of acid is 8.20cm³.
+      For my second titration, the volume of base is 25cm³ and the initial volume of acid is 8.20cm³, and the final volume is 16.1cm³.
+      The molarity of the acid is 0.1.
+      The concentration of the two mixtures is 7.85gdm–³.
+      Find the molarity of hydrogentrioxocarbonate4 ions in the given solution.
+    </p>
+  </div>
+</body>
+</html>
