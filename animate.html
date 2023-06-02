@@ -14,11 +14,27 @@
   
   <script>
     $(document).ready(function() {
-      // When the "animation" link is clicked
-      $("#animation").click(function() {
+      // When the "grow" link is clicked
+      $("#grow").click(function() {
         // Animate the width of the textBox element to 500px over 2000 milliseconds (2 seconds)
         $("#textBox").animate({
           width: "500px"
+        }, 2000);
+      });
+      
+      // When the "move" link is clicked
+      $("#move").click(function() {
+        // Animate the margin-left property of the textBox element to 500px over 2000 milliseconds (2 seconds)
+        $("#textBox").animate({
+          "margin-left": "500px"
+        }, 2000);
+      });
+      
+      // When the "big" link is clicked
+      $("#big").click(function() {
+        // Animate the font-size property of the textBox element to 400px over 2000 milliseconds (2 seconds)
+        $("#textBox").animate({
+          "font-size": "400px"
         }, 2000);
       });
     });
@@ -30,23 +46,23 @@
       height: 200px;
       background-color: #ccc;
       position: absolute;
-      margin-top: 200px;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
-  <!-- Link to trigger the animation -->
-  <a href="#" id="animation">Toggle</a>
+  <!-- Links to trigger the animations -->
+  <a href="#" id="grow">Enlarge</a>
+  <a href="#" id="move">Move</a>
+  <a href="#" id="big">Big</a>
+  <a href="#" id="big">Big</a>
+
   
   <!-- Hidden text box that will slide in and out -->
   <div id="textBox">
     <p>
       For my first titration, my initial volume of base = 25cm³ and the initial volume of acid is 0.00cm³, and the final volume of acid is 8.20cm³.
-      For my second titration, the volume of base is 25cm³ and the initial volume of acid is 8.20cm³, and the final volume is 16.1cm³.
-      The molarity of the acid is 0.1.
-      The concentration of the two mixtures is 7.85gdm–³.
-      Find the molarity of hydrogen trioxocarbonate(IV) ions in the given solution.
     </p>
   </div>
 </body>
